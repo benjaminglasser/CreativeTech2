@@ -4,22 +4,25 @@
 
 @layer base {
   @font-face {
-    font-family: "Steps Mono";
-    src: url("/font/Steps Mono.otf") format("otf");
-  }
-}
-@layer base {
-  @font-face {
-    font-family: "Deadwax";
-    src: url("/font/ArtDystopia.ttf") format("ttf");
+    font-family: "Steps-Mono-Thin";
+    src: url("/font/Steps-Mono-Thin.otf") format("otf");
   }
 
   html,
   body {
-    background: url(/assets/fog.jpeg);
+    background: url(/assets/liquid.gif);
     background-size: cover;
     overflow: hidden;
+    cursor: crosshair;
   }
+}
+
+.bigger {
+  transition: all 0.2s ease-in-out;
+}
+
+.bigger:hover {
+  transform: scale(1.1);
 }
 
 section {
@@ -34,7 +37,7 @@ section .scroll {
   position: absolute;
   top: 0;
   left: 0;
-  font-family: "Steps Mono";
+  font-family: "Steps-Mono-Thin";
   cursor: url("/assets/fire.gif"), auto;
 }
 
