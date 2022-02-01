@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .cntr {
+    @apply flex justify-between pb-4;
+  }
+}
+
 .bodyCntr {
   position: relative;
 }
