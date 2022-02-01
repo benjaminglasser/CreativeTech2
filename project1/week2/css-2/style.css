@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Steps Mono";
+    src: url("/font/Steps Mono.otf") format("otf");
+  }
+}
+@layer base {
+  @font-face {
+    font-family: "Deadwax";
+    src: url("/font/ArtDystopia.ttf") format("ttf");
+  }
+}
+
+.metalFont {
+  font-family: "Deadwax";
+}
