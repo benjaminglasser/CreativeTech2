@@ -13,8 +13,71 @@
     font-family: "Deadwax";
     src: url("/font/ArtDystopia.ttf") format("ttf");
   }
+
+  html,
+  body {
+    background: url(/assets/fog.jpeg);
+    background-size: cover;
+    overflow: hidden;
+  }
 }
 
-.metalFont {
-  font-family: "Deadwax";
+section {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+section .scroll {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Steps Mono";
+  cursor: url("/assets/fire.gif"), auto;
+}
+
+section .scroll div {
+  font-size: 4em;
+  color: rgb(255, 35, 229);
+  background: url(/assets/silver-texture.jpeg);
+  background-size: 450px;
+  white-space: nowrap;
+  animation: animate 40s linear infinite;
+  animation-delay: -40s;
+}
+
+section .scroll div:nth-child(2) {
+  animation: animate2 40s linear infinite;
+  animation-delay: -20s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+section .scroll.text1 {
+  transform: rotate(5deg) translateY(0px) translateX(-200px);
+  box-shadow: 0 5px 15px rgba(255, 21, 208, 0.5);
+  text-shadow: 0 5px 15px rgba(0, 0, 0);
+}
+
+section .scroll.text2 {
+  transform: rotate(-10deg) translateY(800px) translateX(-200px);
+  box-shadow: 0 5px 15px rgba(255, 10, 218, 0.5);
+  text-shadow: 0 5px 15px rgba(0, 0, 0);
 }
