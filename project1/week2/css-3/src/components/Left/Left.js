@@ -1,10 +1,26 @@
 import React from 'react';
+import { motion } from "framer-motion"
 
 function Left() {
     return (
         <>
-            <div className="p-4 flex border-solid border-4 border-t-0 border-black justify-between h-full w-1/3"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptates totam recusandae in perspiciatis velit suscipit rem provident modi neque natus odio, accusantium optio aliquid pariatur nulla quidem? Magni, qui. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas obcaecati, alias nihil molestias itaque tempore porro voluptates aperiam dolore, eos, explicabo minima assumenda. Delectus, labore soluta? Quisquam, accusamus! Quisquam, dolore? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam architecto mollitia rerum dicta aut delectus repellat ullam quasi quidem, qui, eos cupiditate itaque in quia voluptatem sed doloribus, ipsa sapiente! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, voluptates a! Voluptates eligendi quia non enim nobis dolore facere beatae consectetur, dignissimos sequi neque, soluta quas repudiandae quibusdam. Quasi, ab.
+            <div className="w-1/3 flex justify-center border-solid border-black border-l-4 border-b-4">
+                <div className="text-xl p-5 text-justify">
+                    <motion.div
+                        drag
+                        dragConstraints={{
+                            top: -20,
+                            left: -20,
+                            right: 20,
+                            bottom: 20,
+                        }}
+                    >
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus quasi facere inventore omnis. Adipisci sit, necessitatibus, fugiat qui eos architecto numquam ad dolores non, libero impedit perspiciatis aliquid itaque quasi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio maiores veritatis at illo blanditiis dolorem, nisi magni, doloremque magnam laboriosam repellat, sed alias fugit. Sapiente consectetur doloremque repellat! Autem, repudiandae.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus quasi facere inventore omnis. Adipisci sit, necessitatibus, fugiat qui eos architecto numquam ad dolores non, libero impedit perspiciatis aliquid itaque quasi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio maiores veritatis at illo blanditiis dolorem, nisi magni, doloremque magnam laboriosam repellat, sed alias fugit. Sapiente consectetur doloremque repellat! Autem, repudiandae.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus quasi facere inventore omnis. Adipisci sit, necessitatibus, fugiat qui eos architecto numquam ad dolores non, libero impedit perspiciatis aliquid itaque quasi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio maiores veritatis at illo blanditiis dolorem, nisi magni, doloremque magnam laboriosam repellat, sed alias fugit. Sapiente consectetur doloremque repellat! Autem, repudiandae.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus quasi facere inventore omnis. Adipisci sit, necessitatibus, fugiat qui eos architecto numquam ad dolores non, libero impedit perspiciatis aliquid itaque quasi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio maiores veritatis at illo blanditiis dolorem, nisi magni, doloremque magnam laboriosam repellat, sed alias fugit. Sapiente consectetur doloremque repellat! Autem, repudiandae.
+                    </motion.div>
+                </div>
             </div>
         </>
     )
