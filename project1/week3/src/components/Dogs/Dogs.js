@@ -10,14 +10,19 @@ function Dogs(props) {
 
     return (
         <>
-            <div>pups</div>
+
             {
                 props.dogs[0].message.map((d, idx) =>
-                    <img src={d} key={idx} alt={idx} />
+                    <div key={idx} >
+                        {/* <img src={d} key={idx} alt={idx} /> */}
+                        <div className="rounded bg-cover bg-center p-32" style={{ backgroundImage: `url(${d})` }}></div>
+                    </div>
                 )
             }
         </>
     )
 }
+
+
 
 export default Dogs;
