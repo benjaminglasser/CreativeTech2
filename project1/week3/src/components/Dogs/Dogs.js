@@ -13,9 +13,9 @@ function Dogs(props) {
 
             {
                 props.dogs[0].message.map((d, idx) =>
-                    <div key={idx} >
-                        {/* <img src={d} key={idx} alt={idx} /> */}
-                        <div className="rounded bg-cover bg-center p-32" style={{ backgroundImage: `url(${d})` }}></div>
+                    <div key={idx} className="flex flex-col items-center  justify-center mb-4 rounded-3xl md:block " >
+                        <img className="object-contain w-full h-full rounded-3xl " src={d} key={idx} alt={idx} />
+                        {/* <div className="rounded hover:bg-auto bg-cover bg-center" style={{ backgroundImage: `url(${d})` }}></div> */}
                     </div>
                 )
             }
