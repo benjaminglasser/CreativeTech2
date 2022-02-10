@@ -13,7 +13,7 @@ function App() {
   }, []);
 
   function fetchDogs() {
-    fetch('https://dog.ceo/api/breeds/image/random/20')
+    fetch('https://dog.ceo/api/breeds/image/random/40')
       .then(response => response.json())
       .then(data => {
         setDogs([data])
@@ -27,15 +27,18 @@ function App() {
   }
 
   return (
-    <div className="center text-center bg-blue-100">
-      <h1 className="text-9xl font-bold p-10">
-        Dogs!
+    <div className="background center text-center bg-blue-100">
+      <h1 className=" text-4xl md:text-6xl lg:text-8xl font-bold p-10 text-white ">
+        Dogs! Dogs! Dogs!
       </h1>
-      <button className="bg-blue-300 p-3 m-3 mb-8 rounded" onClick={handleClick}>more pups!</button>
+      <button className="
+      p-3 m-3 text-white  hover:text-2xl hover:bg-grdiant-to-r hover:from-yellow-300 hover:to-yellow-700 rounded bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 md:bg-gradient-to-t md:from-emerald-500 md:to-rose-500 md:mb-8 lg:bg-gradient-to-l lg:from-purple-500 lg:via-zinc-200 lg:to-slate-500 shadow-2xl"
+        onClick={handleClick}>more pups!</button>
       <div className="flex flex-col items-center">
-        <div className="leading-none columns-1 gap-y-4  md:columns-3 lg:columns-5 lg:max-w-6xl mx-10">
+        <div className="columns-1 md:columns-3 lg:columns-5 lg:max-w-6xl mx-10 m-20">
           <Dogs dogs={dogs} isLoading={isLoading} />
         </div>
+
       </div>
       <Footer />
     </div>
