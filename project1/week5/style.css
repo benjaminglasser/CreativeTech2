@@ -1,15 +1,58 @@
 body {
   background: lightgreen;
+  background-image: url("./imgs/frogBG.jpeg");
+  animation: moveBG 50s linear infinite;
+}
+
+@keyframes moveBG {
+  from {
+    background-position: 0 0%;
+  }
+  to {
+    background-position: 0 5072%;
+  }
 }
 
 h1 {
-  display: block;
-  margin: 3rem auto;
-  width: 100vw;
   text-align: center;
-  color: darkgreen;
+  font-size: 5vw;
 }
 
+.title {
+  display: block;
+  margin: 3rem auto;
+  box-shadow: 3px 3px 10px black;
+  background: rgba(28, 58, 36, 0.671);
+  width: 50vw;
+  border-radius: 30px;
+}
+
+.linear-wipe {
+  text-align: center;
+
+  background: linear-gradient(
+    to right,
+    rgb(172, 243, 124) 20%,
+    rgb(137, 255, 126) 40%,
+    rgb(0, 255, 115) 60%,
+    rgb(79, 164, 56) 80%
+  );
+  background-size: 200% auto;
+
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* text-shadow: 3px 3px 10px black; */
+  animation: shine 1s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
 .frogsCntr {
   gap: 2rem;
   margin: 0 auto;
@@ -22,6 +65,13 @@ h1 {
 .thumbnail {
   width: 10vw;
   height: 10vw;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.thumbnail:hover {
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 10px black;
 }
 
 .mainFrogCntr {
